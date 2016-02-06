@@ -3,16 +3,6 @@
 const gulp = require('gulp')
 const plug = require('gulp-load-plugins')({ lazy: true })
 
-var minimist = require('minimist');
-var analytics = require('./tools/analytics/analytics');
-
-var cliArgs = minimist(process.argv.slice(2));
-
-if (cliArgs.projects) {
-  // normalize for analytics
-  cliArgs.projects.split(',').sort().join(',');
-}
-
 gulp.task('doc', gulp.parallel(buildDocs))
 
 gulp.task('build', gulp.series(
@@ -110,15 +100,3 @@ function buildDocs() {
       version: true
     }));
 }
-
-var firstTask = true;
-gulp.on('task_serve', (e) => {
-  if (firstTask) {
-    firstTask = false;
-    analytics.buildSuccess('gulp <startup>', process.uptime() * 1000);
-  }
-
-  analytics.buildStart('gulp ' + e.task)
-});
-gulp.on('task_stop', (e) => {analytics.buildSuccess('gulp ' + e.task, e.duration * 1000)});
-gulp.on('task_err', (e) => {analytics.buildError('gulp ' + e.task, e.duration * 1000)});
