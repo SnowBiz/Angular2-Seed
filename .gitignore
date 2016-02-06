@@ -1,9 +1,13 @@
-/__build__
-/__server_build__
-/node_modules
-/typings
+#
+# git ignored files
+#
+
+**/docs/
+**/dist/
+**/jspm_packages/
+**/node_modules/
+**/tmp/
+**/typings/
+
+.DS_Store
 npm-debug.log
-
-/dist/
-
-/tsd_typings/
