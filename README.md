@@ -1,7 +1,7 @@
 # Angular 2 Seed
 A minimal Angular 2 starter for Universal JavaScript using TypeScript
 
-## Installation
+## Install
 * `npm install --global jspm typescript typings`
 
 * `npm install`
