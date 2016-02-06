@@ -18,7 +18,8 @@ gulp.task('serve', gulp.series(
     gulp.series(compileTypeScript, bundle)
     ),
   gulp.parallel(watch, serve)
-  ))
+  )
+)
 
 const tsProject = plug.typescript.createProject('tsconfig.json')
 function compileTypeScript() {

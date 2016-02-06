@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "rootDir": ".",
+    "outDir": "../../gulpfile.js",
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "typings/browser.d.ts",
+    "typings/browser"
+  ]
+}
