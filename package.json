@@ -11,7 +11,7 @@
     "prestart": "node ./node_modules/.bin/tsc --project tools/gulpfile.ts",
     "start": "node ./node_modules/gulp/bin/gulp.js serve",
     "doc": "node ./node_modules/gulp/bin/gulp.js doc",
-    "build": "node ./node_modules/gulp/bin/gulp.js build",
+    "build": "node ./node_modules/.bin/tsc --project tools/gulpfile.ts && node ./node_modules/gulp/bin/gulp.js build",
     "serve": "node ./node_modules/gulp/bin/gulp.js serve"
   },
   "license": "MIT",
