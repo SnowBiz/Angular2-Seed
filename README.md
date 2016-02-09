@@ -1,3 +1,5 @@
+[![Buildtime trend](https://buildtimetrend.herokuapp.com/badge/<USER/PROJECT>/latest)](https://buildtimetrend.herokuapp.com/dashboard/<snowbiz/Angular2-Seed>/)
+
 # Angular 2 Seed
 A minimal Angular 2 starter for Universal JavaScript using TypeScript
 
