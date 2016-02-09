@@ -6,10 +6,10 @@ branches:
     - master
 before_script:
   - npm install --global jspm typescript typings
-  - npm install
   - jspm install
   - typings install
   - cd tools/gulpfile.ts && typings install && cd ../../
+  - npm run build
 
 notifications:
       webhooks:
