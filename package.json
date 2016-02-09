@@ -7,7 +7,7 @@
     "url": "https://github.com/angular/universal-starter.git"
   },
   "scripts": {
-    "postinstall": "gulp clean:ng2",
+    "postinstall": "",
     "prestart": "node ./node_modules/.bin/tsc --project tools/gulpfile.ts",
     "start": "node ./node_modules/gulp/bin/gulp.js serve",
     "doc": "node ./node_modules/gulp/bin/gulp.js doc",
