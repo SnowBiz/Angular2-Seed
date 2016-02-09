@@ -11,9 +11,11 @@ before_install:
 
 before_script:
   - npm install --global jspm typescript typings
+  - npm install
   - jspm install
   - typings install
   - cd tools/gulpfile.ts && typings install && cd ../../
+  - ls
   - npm run build
 
 notifications:
