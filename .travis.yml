@@ -4,6 +4,11 @@ node_js:
 branches:
   only:
     - master
+    
+before_install:
+- npm install -g npm@3.5.3
+- echo "next"
+
 before_script:
   - npm install --global jspm typescript typings
   - jspm install
