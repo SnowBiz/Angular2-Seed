@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "0.10"
+branches:
+  only:
+    - master
+before_script:
+  - npm install --global jspm typescript typings
+  - npm install
+  - jspm install
+  - typings install
+  - cd tools/gulpfile.ts && typings install && cd ../../
+
+notifications:
+      webhooks:
+        # trigger Buildtime Trend Service to parse Travis CI log
+        - https://buildtimetrend.herokuapp.com/travis
