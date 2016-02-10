@@ -19,7 +19,7 @@ before_script:
   - ls
   - npm run build
 
-  script:
+script:
   - "./scripts/ci/deploy.sh"
 
 notifications:
