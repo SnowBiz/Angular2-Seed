@@ -54,7 +54,8 @@
     "systemjs-builder": "^0.14.11",
     "tslint": "^3.3.0",
     "typescript": "^1.7.3",
-    "typings": "^0.6.2"
+    "typings": "^0.6.2",
+    "universal-analytics": "^0.3.10"
   },
   "jspm": {
     "configFile": "src/config.js",
