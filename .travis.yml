@@ -20,6 +20,7 @@ before_script:
   - npm run build
 
 script:
+  - "chmod a+x ./scripts/ci/deploy.sh"
   - "./scripts/ci/deploy.sh"
 
 notifications:
