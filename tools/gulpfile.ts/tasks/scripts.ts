@@ -6,6 +6,7 @@ namespace Tools.Gulpfile {
   const { dest, series, src, watch } = require('gulp')
   const plug = require('gulp-load-plugins')({ lazy: true })
   const tsProject = plug.typescript.createProject('tsconfig.json')
+  const concat = require('gulp-concat')
 
   interface IPipeline {
     clean: any
@@ -34,12 +35,16 @@ namespace Tools.Gulpfile {
 
     }
 
+    public clone = function cloneScripts() {
+      return src([
+          'node_modules/angular2/bundles/angular2-polyfills.js'
+        ])
+        .pipe(dest('tmp/serve'))
+    }
 
     public watch = function watchScripts() {
       watch(['src/**/*.ts'], series(this.build))
     }
-
-    public clone = function cloneScripts() { }
 
     public check = function checkScripts(nextTask) {
       return src(['src/**/*.ts'])
@@ -66,6 +71,15 @@ namespace Tools.Gulpfile {
 
     }
 
+    private concatScripts = function concatScripts() {
+      return src([
+        'node_modules/angular2/bundles/angular2-polyfills.js',
+        'tmp/serve/bundle.js'
+      ])
+        .pipe(concat('bundle.js'))
+        .pipe(dest('tmp/serve'))
+    }
+
     private compileTypeScript = function compileTypeScript() {
       return src(['src/**/*.ts'])
         .pipe(plug.debug())
@@ -75,7 +89,7 @@ namespace Tools.Gulpfile {
         .pipe(dest('tmp/serve'))
     }
 
-    public build = series(this.compileTypeScript, this.bundleScripts)
+    public build = series(this.compileTypeScript, this.bundleScripts, this.concatScripts)
   }
 
   module.exports = new ScriptsPipeline()

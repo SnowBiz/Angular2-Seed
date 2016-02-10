@@ -2,12 +2,11 @@ module Gulpfile.Servers {
 
   module.exports = {
     files: [
-      'tmp/serve/**/*.js',
-      'src/**/*.{css,html}'
+      'dist/**/*.{css,html,js}'
     ],
     server: {
       baseDir: [
-        'tmp/serve', 'src'
+        'dist'
       ]
     }
   }
