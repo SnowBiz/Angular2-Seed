@@ -15,9 +15,7 @@ before_script:
   - npm install --global jspm typescript typings
   - npm install
   - jspm install
-  - typings install
   - cd tools/gulpfile.ts && typings install && cd ../../
-  - echo "SNOW"
   - ls
   - npm run build
 
