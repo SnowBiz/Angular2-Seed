@@ -4,7 +4,7 @@ node_js:
 branches:
   only:
     - master
-    
+
 before_install:
 - echo "====================================="
 - curl -I https://api.github.com/orgs/octokit
@@ -19,7 +19,14 @@ before_script:
   - ls
   - npm run build
 
+  script:
+  - "./scripts/ci/deploy.sh"
+
 notifications:
       webhooks:
         # trigger Buildtime Trend Service to parse Travis CI log
         - https://buildtimetrend.herokuapp.com/travis
+
+env:
+  global:
+    secure: KkZQuJjdEThvqbrmhhO2Lq59rj1djWgupm8soBBVWsrn2PGnfDJKfN9DtdfmrnXGUcxHzzHPKDsrPG2KWhoWOPudhS56i0LBtnebYqnuJcY8h0q8fexmSeTfm+fCOFoVNlg3/d44nYl+Sm7WKrCcqoNKtyClU23k3eyv7htsGMtp+m4nkXiSMNkxhjPMIgBY5J/mRx+aBLYrK6TXevHGtWEK2SOinzFyT/LDRo4b8XPENTVChXic9XzCpLGcZaKWYE0dduchv4hVVpK8bCyNqMrEtJQWp331GmHvugnMjKMdoVYzyjCkUHYQk3FbkZUY9U+H7gneL8dFjiMHoNIPyMXrbp7qh7vZyn9lQzttPdX2emef7Qbo7cuib0U7m1oJ6gQM68YsPMwTVFwnH49tRH/0Dvw4nke4ZY7X+Ysp+ouIOPuku2j99yJ+oST3rys5nrdT9aMOezKMUXWzS+r3xanhQ3y5Azd1zGe0gE2nR5ySFzuUdOyn990kW5jrQqv7SqPGyQHR0SDBMZvWS4LV3BYn8qoiYURjOlZ+rniVUsUtTeUU/5DsQ95IHOZ74hkVPQtynk00k1A/yrbe0FO+wYykIrlooIn4Qz8mOBwT13in90lzJLwWgK2i2dMr1XCfPgx5tJOmJbEjLCbJUo5PdxUiEC1BFh5BrhN7m8K6skA=
