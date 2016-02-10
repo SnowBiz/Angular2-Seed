@@ -6,6 +6,8 @@ branches:
     - master
     
 before_install:
+- echo "====================================="
+- curl -I https://api.github.com/orgs/octokit
 - npm install -g npm@3.5.3
 - echo "next"
 
