@@ -18,10 +18,10 @@ before_script:
   - cd tools/gulpfile.ts && typings install && cd ../../
   - ls
   - npm run build
-
-script:
-  - "chmod a+x ./scripts/ci/deploy.sh"
-  - "./scripts/ci/deploy.sh"
+# -- Commenting out deploy script until it is needed / working
+#script:
+#  - "chmod a+x ./scripts/ci/deploy.sh"
+#  - "./scripts/ci/deploy.sh"
 
 notifications:
       webhooks:
