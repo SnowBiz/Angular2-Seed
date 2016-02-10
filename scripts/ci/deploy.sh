@@ -17,7 +17,7 @@ mkdir .publish
 cd .publish
 git init
 git clone https://github.com/SnowBiz/Angular2-Seed.git
-cd travis-deploy
+cd Angular2-Seed
 git checkout gh-pages
 rm -rf *
 mv ../../dist/* .
