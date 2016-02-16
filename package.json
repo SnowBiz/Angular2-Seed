@@ -20,18 +20,18 @@
     "JGeschwendt"
   ],
   "dependencies": {
-    "angular2": "2.0.0-beta.6",
-    "angular2-universal-preview": "0.55.3",
-    "es6-shim": "0.34.4",
+    "angular2": "2.0.0-beta.1",
+    "angular2-universal-preview": "0.32.2",
+    "es6-shim": "^0.33.3",
     "css": "2.2.1",
-    "express": "4.13.4",
-    "lodash": "4.3.0",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
     "parse5": "^1.5.0",
     "preboot": "^1.0.2",
-    "reflect-metadata": "0.1.3",
-    "rxjs": "5.0.0-beta.2",
-    "xhr2": "0.1.3",
-    "zone.js": "0.5.14"
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "xhr2": "^0.1.3",
+    "zone.js": "0.5.10"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
