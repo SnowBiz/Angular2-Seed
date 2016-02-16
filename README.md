@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/SnowBiz/Angular2-Seed.svg?branch=master)](https://travis-ci.org/SnowBiz/Angular2-Seed)
-
+[![DavidDm](https://david-dm.org/snowbiz/angular2-seed.svg)](https://david-dm.org/snowbiz/angular2-seed)
 # Angular 2 Seed
 A minimal Angular 2 starter for Universal JavaScript using TypeScript
 
